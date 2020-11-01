@@ -48,6 +48,8 @@ public class Prestamos_act extends AppCompatActivity
 
         int axel = 750000;
         int roxana = 900000;
+        int betzabe = 450000;
+        int matias = 350000;
         int base = 0;
 
 //AXEL
@@ -65,6 +67,7 @@ public class Prestamos_act extends AppCompatActivity
             text.setText("El precio del plan es: " + resultAutomotriz);
         }
 
+
         //ROXANA
 
         if (cliente.equals("roxana") && planes.equals("hipotecario"))
@@ -81,6 +84,36 @@ public class Prestamos_act extends AppCompatActivity
             text.setText("El precio del plan es: " + resultAutomotriz);
         }
 
+        //betzabe
+        if (cliente.equals("betzabe") && planes.equals("hipotecario"))
+        {
+            base = betzabe;
+            int resultHipotecario = base + creditos.getHipotecario();
+            text.setText("El prestamo es: " + resultHipotecario);
+        }
+
+        if (cliente.equals("betzabe") && planes.equals("automotriz"))
+        {
+            base = betzabe;
+            int resultAutomotriz = base + creditos.getAutomotriz();
+            text.setText("El precio del plan es: " + resultAutomotriz);
+        }
+
+        //matias
+        if (cliente.equals("matias") && planes.equals("hipotecario"))
+        {
+            base = matias;
+            int resultHipotecario = base + creditos.getHipotecario();
+            text.setText("El prestamo es: " + resultHipotecario);
+        }
+
+        if (cliente.equals("matias") && planes.equals("automotriz"))
+        {
+            base = matias;
+            int resultAutomotriz = base + creditos.getAutomotriz();
+            text.setText("El precio del plan es: " + resultAutomotriz);
+        }
+
 
     }
 
@@ -92,6 +125,8 @@ public class Prestamos_act extends AppCompatActivity
 
         int axel = 750000;
         int roxana = 900000;
+        int betzabe = 450000;
+        int matias = 350000;
         int base = 0;
         int ultimo = 0;
 
@@ -125,6 +160,42 @@ public class Prestamos_act extends AppCompatActivity
         if (cliente.equals("roxana") && planes.equals("automotriz"))
         {
             base = roxana;
+            int resultAutomotriz = base + creditos.getAutomotriz();
+            ultimo = resultAutomotriz/8;
+            text.setText("Cuota de: " + ultimo);
+        }
+
+        //betzabe
+
+        if (cliente.equals("betzabe") && planes.equals("hipotecario"))
+        {
+            base = betzabe;
+            int resultHipotecario = base + creditos.getHipotecario();
+            ultimo = resultHipotecario/12;
+            text.setText("Cuota de: " + ultimo);
+        }
+
+        if (cliente.equals("betzabe") && planes.equals("automotriz"))
+        {
+            base = betzabe;
+            int resultAutomotriz = base + creditos.getAutomotriz();
+            ultimo = resultAutomotriz/8;
+            text.setText("Cuota de: " + ultimo);
+        }
+
+        //matias
+
+        if (cliente.equals("matias") && planes.equals("hipotecario"))
+        {
+            base = matias;
+            int resultHipotecario = base + creditos.getHipotecario();
+            ultimo = resultHipotecario/12;
+            text.setText("Cuota de: " + ultimo);
+        }
+
+        if (cliente.equals("matias") && planes.equals("automotriz"))
+        {
+            base = matias;
             int resultAutomotriz = base + creditos.getAutomotriz();
             ultimo = resultAutomotriz/8;
             text.setText("Cuota de: " + ultimo);

@@ -56,7 +56,6 @@ public class Seguridad_act extends AppCompatActivity
             Toast.makeText(this, "Debe ingresar una clave", Toast.LENGTH_LONG).show();
             return null;
             }
-
     }
 
     public void Encriptar(View view)
